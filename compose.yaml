@@ -1,0 +1,12 @@
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    restart: unless-stopped
+    volumes:
+      - "./db-data:/var/lib/mysql"
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=November@281993!
+      - MYSQL_DATABASE=senegal_service_hub
